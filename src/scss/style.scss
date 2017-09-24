@@ -1,0 +1,242 @@
+@import "bulma/sass/utilities/initial-variables";
+
+$primary: $grey;
+$family-sans-serif: 'Oxygen', sans-serif;
+$family-primary: $family-sans-serif;
+$size-large: $size-3;
+$border: $grey-lighter;
+$border-hover: $border;
+$card-shadow: 0 0 0 1px rgba($black, 0.1);
+
+@import "bulma/bulma";
+
+h1 {
+  margin-top: 50px;
+}
+
+h1.homepage {
+  font-size: 5rem;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.navbar {
+  border-bottom: 6px double $grey;
+  color: $light;
+}
+
+ul.inactive {
+  margin-top: 50px;
+}
+
+li {
+  list-style-type: none;
+}
+
+input.input {
+      border: none;
+      box-shadow: none;
+      padding-bottom: 5px;
+      &.inactive {
+        color: $grey-lighter;
+        text-decoration: line-through;
+      }
+      &.comment-input {
+        margin-top: 5px;
+        margin-left: 15px;
+        font-size: $size-small;
+        margin-bottom: 1rem;
+        @extend .login;
+      }
+      &::placeholder {
+        color: $grey-lighter;
+      }
+      &.login {
+        padding-bottom: 0;
+        border-bottom: 1px solid $border;
+        border-radius: 0;
+      }
+      &.modal-input {
+        @extend .login;
+      }
+}
+
+.control{
+  &.login {
+    margin-top: 50px;
+    margin-left: 20px;
+  }
+  &.register {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+}
+
+button.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: .5rem;
+  border: none;
+  color: $grey-light;
+  padding: .625em;
+  &.login {
+    margin-left: 0;
+  }
+  &.add-entry-button {
+    padding: 1.5em 1em;
+  }
+  &.comment-button {
+    padding: 2px;
+    margin-left: 3px;
+  }
+  &.comment-delete-button {
+    padding: 3px;
+  }
+  &.hidden {
+    display: none;
+  }
+  &:hover {
+    color: $grey;
+  }
+  &:active {
+    border: none;
+    box-shadow: none;
+    color: $grey-dark;
+  }
+}
+
+.card {
+  margin-bottom: 0.25rem;
+  &.inactive {
+    height: 30px;
+    color: $grey-lighter;
+    box-shadow: none;
+  }
+  .column {
+    padding-bottom: 0.75rem;
+  }
+}
+
+.hidden {
+  display: none;
+  &.comment-form {
+    display: none;
+  }
+}
+
+.column {
+  padding: .5rem;
+}
+
+.column.justify-content-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.field:not(:last-child) {
+  margin: 0;
+}
+
+.columns.is-gapless:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.checkbox-div {
+  min-width: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.comment-container {
+  padding-top: 0;
+}
+
+.column.comment-delete-container {
+  padding: 0;
+  }
+
+.columns.delete-share-container .column {
+  padding-left: 17px;
+  padding-right: 0;
+}
+
+.columns.delete-share-container .column .button {
+  padding: 5px;
+}
+
+.comment-input {
+  padding-bottom: 0;
+}
+
+.fa-plus-square {
+  font-size: 1rem;
+}
+
+.fa-times {
+  font-size: 0.9rem;
+}
+
+.fa-list {
+  margin-top: 2.1rem;
+  margin-left: 0.2rem;
+  font-size: 1rem;
+}
+
+.fa-check-square-o.inactive:hover {
+  color: $grey-light;
+}
+
+.is-small {
+  font-size: $size-7;
+}
+
+.column.comment-area {
+  max-width: 70%;
+  padding: 5px;
+}
+
+.columns.comment-area-container {
+  margin-bottom: 0;
+  margin-left: 8px;
+  &:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
+.centered {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.centered div {
+  margin-top: 30px;
+}
+
+.button.modal-close-button {
+  padding: 5px;
+}
+
+.column.modal-close-button-container {
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.columns.share-cancel-container {
+  margin-top: 30px;
+}
+
+.button.cancel-button {
+  color: $grey-lighter;
+}
+
+#share-list-form {
+  margin-left: 15px;
+  margin-right: 20px;
+}
